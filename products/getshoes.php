@@ -5,7 +5,7 @@ require_once '../inc/functions.php';
 
 try {
     $db = openDb();
-    selectAsJson($db, 'select * from tuote where kategoria_id = 3');
+    selectAsJson($db, 'select * from product where category_id = 3');
 }
 catch (PDOException $pdoex){
     returnError($pdoex);

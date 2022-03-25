@@ -1,32 +1,32 @@
-drop database if exists verkkokauppa;
+drop database if exists webshop;
 
-create database verkkokauppa;
-use verkkokauppa;
+create database webshop;
+use webshop;
 
-create table kategoria (
+create table category (
     id int primary key auto_increment,
-    nimi varchar(50) not null
+    name varchar(50) not null
 );
 
-insert into kategoria (nimi) values ('Yläosat');
-insert into kategoria (nimi) values ('Alaosat');
-insert into kategoria (nimi) values ('Kengät');
-insert into kategoria (nimi) values ('Asusteet');
+insert into category (name) values ('Yläosat');
+insert into category (name) values ('Alaosat');
+insert into category (name) values ('Kengät');
+insert into category (name) values ('Asusteet');
 
 
 
-drop table if exists tuote;
+drop table if exists product;
 
-create table tuote (
+create table product (
     id int primary key auto_increment,
-    nimi varchar(100) not null,
-    hinta double (10,2) not null,
-    kuva varchar(50),
-    kategoria_id int not null,
-    index kategoria_id(kategoria_id),
-    foreign key (kategoria_id) references kategoria(id)
+    name varchar(100) not null,
+    price double (10,2) not null,
+    image varchar(50),
+    category_id int not null,
+    index category_id(category_id),
+    foreign key (category_id) references category(id)
     on delete restrict
 );
 
-insert into tuote (nimi, hinta, kategoria_id) values ('Testikenkä 1', 10, 3);
-insert into tuote (nimi, hinta, kategoria_id) values ('Testikenkä 2', 20, 3);
+insert into product (name, price, category_id) values ('Testikenkä 1', 10, 3);
+insert into product (name, price, category_id) values ('Testikenkä 2', 20, 3);
