@@ -18,7 +18,7 @@ function selectAsJson(object $db, string $sql): void {
     echo json_encode($results);
 }
 
-function execureInsert (object $db, string $sql): int {
+function executeInsert (object $db, string $sql): int {
     $query = $db->query($sql);
     return $db->lastInsertId();
 }
