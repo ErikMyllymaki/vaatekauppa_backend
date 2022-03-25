@@ -1,6 +1,6 @@
 <?php
 function openDb(): object {
-    $ini = parse_ini_file("./myconf.ini", true);
+    $ini = parse_ini_file("../myconf.ini", true);
 
     $host = $ini['host'];
     $database = $ini['db'];
