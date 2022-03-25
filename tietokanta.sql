@@ -14,6 +14,9 @@ insert into kategoria (nimi) values ('Kengät');
 insert into kategoria (nimi) values ('Asusteet');
 
 
+
+drop table if exists tuote;
+
 create table tuote (
     id int primary key auto_increment,
     nimi varchar(100) not null,
@@ -25,5 +28,5 @@ create table tuote (
     on delete restrict
 );
 
-insert into tuote (nimi, hinta, kategoria_id) values ('Testikenkä 1', 10, 1);
-insert into tuote (nimi, hinta, kategoria_id) values ('Testikenkä 2', 20, 1);
+insert into tuote (nimi, hinta, kategoria_id) values ('Testikenkä 1', 10, 3);
+insert into tuote (nimi, hinta, kategoria_id) values ('Testikenkä 2', 20, 3);
