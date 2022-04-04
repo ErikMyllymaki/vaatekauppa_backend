@@ -22,18 +22,13 @@ try {
     $category = $query -> fetch(PDO::FETCH_ASSOC);
 
 
-    $sql = "";
+    // $sql2 = "";
 
-    if (count($parameters === 3)) {
-        $sql2 = "select * from product where category_id = $category_id and gender = '$gender'";
+    // if (cäount($parameters === 3)) {
+    $sql = "select * from product where category_id = $category_id and gender = '$gender'";
 
-    }
-     else {
-        $sql2 = "select * from product where category_id = $category_id";
 
-    }
-
-    $query = $db->query($sql2);
+    $query = $db->query($sql);
     $products = $query->fetchAll(PDO::FETCH_ASSOC);
 
     // $query = $db->query($sql);
