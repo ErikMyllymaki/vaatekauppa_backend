@@ -21,6 +21,7 @@ create table product (
     id int primary key auto_increment,
     name varchar(100) not null,
     price double (10,2) not null,
+    gender CHAR(1),
     image varchar(50),
     category_id int not null,
     index category_id(category_id),
