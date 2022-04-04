@@ -12,7 +12,7 @@ try {
 
     // $query = null
 
-    echo count($parameters);
+    // echo count($parameters);
 
 
 
@@ -24,8 +24,14 @@ try {
 
     // $sql2 = "";
 
-    // if (cäount($parameters === 3)) {
-    $sql = "select * from product where category_id = $category_id and gender = '$gender'";
+    if ($gender === 'M') {
+    $sql = "select * from product where category_id = $category_id and gender = 'M'";
+    }
+    else if ($gender === 'N') {
+        $sql = "select * from product where category_id = $category_id and gender = 'N'";
+    } else {
+        $sql = "select * from product where category_id = $category_id";
+    }
 
 
     $query = $db->query($sql);
