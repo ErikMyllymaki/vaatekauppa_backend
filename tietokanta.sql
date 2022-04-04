@@ -29,8 +29,8 @@ create table product (
     on delete restrict
 );
 
-insert into product (name, price, category_id, gender) values ('Testikenkä 1', 10, 3, 'M');
-insert into product (name, price, category_id, gender) values ('Testikenkä 2', 20, 3, 'N');
+insert into product (name, price, category_id, gender) values ('Testikenkä 1 m', 10, 3, 'M');
+insert into product (name, price, category_id, gender) values ('Testikenkä 2 n', 20, 3, 'N');
 
-insert into product (name, price, category_id) values ('Testikenkä 3', 20, 3,);
+insert into product (name, price, category_id) values ('Testikenkä 3', 20, 3);
 
