@@ -14,11 +14,8 @@ try {
     $query = $db->query($sql);
     $category = $query -> fetch(PDO::FETCH_ASSOC);
 
-    if ($gender === 'M') {
-    $sql = "select * from product where category_id = $category_id and gender = 'M'";
-    }
-    else if ($gender === 'N') {
-        $sql = "select * from product where category_id = $category_id and gender = 'N'";
+    if ($gender === 'M' || $gender === 'N') {
+    $sql = "select * from product where category_id = $category_id and gender = '$gender'";
     } else {
         $sql = "select * from product where category_id = $category_id";
     }
