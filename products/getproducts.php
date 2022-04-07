@@ -15,8 +15,9 @@ try {
     $category = $query -> fetch(PDO::FETCH_ASSOC);
 
     if ($gender === 'M' || $gender === 'N') {
-    $sql = "select * from product where category_id = $category_id and gender = '$gender'";
-    } else if ($gender > 0 && $gender < 10000) {
+        $sql = "select * from product where category_id = $category_id and gender = '$gender'";
+    }
+    else if ($gender > 0 && $gender < 10000) {
         $sql = "select * from product where id = $gender";
     }
     else {
