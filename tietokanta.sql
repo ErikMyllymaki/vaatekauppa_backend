@@ -28,5 +28,12 @@ create table product (
     on delete restrict
 );
 
+create table order (
+    ordernro integer primary key,
+    customer_id char(20) not null,
+    orderdate datetime not null
+    
+);
+
 insert into product (name, price, category_id) values ('Testikenkä 1', 10, 3);
 insert into product (name, price, category_id) values ('Testikenkä 2', 20, 3);
