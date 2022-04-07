@@ -6,6 +6,7 @@ require_once '../inc/functions.php';
 $uri = parse_url(filter_input(INPUT_SERVER, 'PATH_INFO'), PHP_URL_PATH);
 $parameters = explode('/',$uri);
 $category_id = $parameters[1];
+$gender = $parameters[2];
 
 try {
     $db = openDb();
@@ -13,7 +14,12 @@ try {
     $query = $db->query($sql);
     $category = $query -> fetch(PDO::FETCH_ASSOC);
 
-    $sql = "select * from product where category_id = $category_id";
+    if ($gender === 'M' || $gender === 'N') {
+    $sql = "select * from product where category_id = $category_id and gender = '$gender'";
+    } else {
+        $sql = "select * from product where category_id = $category_id";
+    }
+
     $query = $db->query($sql);
     $products = $query->fetchAll(PDO::FETCH_ASSOC);
 
