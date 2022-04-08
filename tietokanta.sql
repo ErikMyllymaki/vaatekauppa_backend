@@ -29,8 +29,22 @@ create table product (
     on delete restrict
 );
 
-insert into product (name, price, category_id, gender) values ('Testikenkä 1 m', 10, 3, 'M');
-insert into product (name, price, category_id, gender) values ('Testikenkä 2 n', 20, 3, 'N');
+/* create table order (
+    ordernro integer primary key,
+    customer_id char(20) not null,
+    orderdate datetime not null
+    
+); */
 
-insert into product (name, price, category_id) values ('Testikenkä 3', 20, 3);
 
+insert into product (name, price, category_id, gender, image) values ('Testituote 1', 10, 3, 'M', 'kuva.png');
+insert into product (name, price, category_id, gender, image) values ('Testituote 2', 20, 3, 'N', 'kuva.png');
+
+insert into product (name, price, category_id, gender, image) values ('Testikenkä 1', 10, 2, 'M', 'kuva.png');
+insert into product (name, price, category_id, gender, image) values ('Testikenkä 2', 20, 2, 'M', 'kuva.png');
+
+insert into product (name, price, category_id, gender, image) values ('Testikenkä 1', 10, 1, 'M', 'kuva.png');
+insert into product (name, price, category_id, gender, image) values ('Testikenkä 2', 20, 1,'N', 'kuva.png');
+
+insert into product (name, price, category_id, gender, image) values ('Testikenkä 1', 10, 4,'N', 'kuva.png');
+insert into product (name, price, category_id, gender, image) values ('Testikenkä 2', 20, 4,'N', 'kuva.png');
