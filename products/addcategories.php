@@ -1,31 +1,25 @@
+
 <?php
-require_once '../inc/headers.php';
-require_once '../inc/functions.php';
+ require_once '../inc/headers.php';
+ require_once '../inc/functions.php';
 
-//Filtteroidaan POST-inputit (ei käytetä string-filtteriä, koska deprekoitunut)
-    //Jos parametria ei löydy, funktio palauttaa null
+$input = json_decode(file_get_contents('php://input'));
+$name = filter_var($input->name, FILTER_SANITIZE_SPECIAL_CHARS);
 
-    $categoryname = filter_input(INPUT_POST, "categoryname"); // onko frontin inputin id "categoryname" JA VOIKO OLLA INPUT_POST???????????
+try {
+$db = openDb();
+$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    
-        //Tarkistetaan onko muttujia asetettu
-        if (!isset($categoryname) || (empty($categoryname)) ) {
-            throw new Exception("Kategorian nimeä ei ole syötetty. Kategoriaa ei voida lisätä");
-        }
-    
-        try {
-            $db = openDb();
-            //Suoritetaan parametrien lisääminen tietokantaan.
-            $sql = "INSERT INTO category (name) VALUES (?)";
-            $statement = $db->prepare($sql);
-            $statement->bindParam(1, $categoryname);
-            $statement->execute();
+$query = $db->prepare('insert into category(name) values (:name)');
+$query->bindValue(':name',$name,PDO::PARAM_STR);
+$query->execute();
 
-            $data = array('id' => $db->lastInsertId(),'categoryname' => $categoryname);
-            print json_encode($data);
-        } catch (PDOException $e) {
-            returnError($e);
-        }
+header('HTTP/1.1 200 OK');
+$data = array('id' => $db->lastInsertId(), 'name' => $name);
+print json_encode($data);
+} catch (PDOExpection $pdoex) {
+    header('HTTP/1.1 500 Internal Server Error');
+    $error = array('error' => $pdoex->getMessage());
+    print json_encode($error);
+}
 
-
-?>
