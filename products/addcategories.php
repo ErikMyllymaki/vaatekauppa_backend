@@ -11,7 +11,7 @@ $db = openDb();
 $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 $query = $db->prepare('insert into category(name) values (:name)');
-$query->bindValue(':name',$description,PDO::PARAM_STR);
+$query->bindValue(':name',$name,PDO::PARAM_STR);
 $query->execute();
 
 header('HTTP/1.1 200 OK');
