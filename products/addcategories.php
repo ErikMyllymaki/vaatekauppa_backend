@@ -8,7 +8,6 @@ $name = filter_var($input->name, FILTER_SANITIZE_SPECIAL_CHARS);
 
 try {
 $db = openDb();
-$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 $query = $db->prepare('insert into category(name) values (:name)');
 $query->bindValue(':name',$name,PDO::PARAM_STR);
