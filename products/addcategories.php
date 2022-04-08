@@ -17,7 +17,7 @@ $query->execute();
 header('HTTP/1.1 200 OK');
 $data = array('id' => $db->lastInsertId(), 'name' => $name);
 print json_encode($data);
-} catch (PDOExpection $pdoex) {
+} catch (PDOException $pdoex) {
     header('HTTP/1.1 500 Internal Server Error');
     $error = array('error' => $pdoex->getMessage());
     print json_encode($error);
