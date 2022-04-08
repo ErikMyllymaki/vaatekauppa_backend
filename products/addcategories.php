@@ -7,15 +7,6 @@ require_once '../inc/functions.php';
 
     $categoryname = filter_input(INPUT_POST, "categoryname"); // onko frontin inputin id "categoryname" JA VOIKO OLLA INPUT_POST???????????
 
-    if(isset($categoryname)) {
-        try{
-        addCategory($categoryname);
-        } catch(Exception $e) {
-        returnError($e); 
-        }
-    }
-
-    function addCategory($categoryname) {
     
         //Tarkistetaan onko muttujia asetettu
         if (!isset($categoryname) || (empty($categoryname)) ) {
@@ -36,6 +27,5 @@ require_once '../inc/functions.php';
             returnError($e);
         }
 
-    }
 
 ?>
