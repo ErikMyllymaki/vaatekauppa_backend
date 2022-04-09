@@ -29,12 +29,12 @@ create table product (
     on delete restrict
 );
 
-/* create table order (
-    ordernro integer primary key,
-    customer_id char(20) not null,
-    orderdate datetime not null
-    
-); */
+create table message (
+    id int primary key AUTO_INCREMENT,
+    name varchar(100) not null,
+    email varchar(100) not null,
+    message varchar(500) not null
+);
 
 
 insert into product (name, price, category_id, gender, image) values ('Testituote 1', 10, 3, 'M', 'kuva.png');
