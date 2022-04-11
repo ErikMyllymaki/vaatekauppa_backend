@@ -7,6 +7,7 @@ $uri = parse_url(filter_input(INPUT_SERVER, 'PATH_INFO'), PHP_URL_PATH);
 $parameters = explode('/',$uri);
 $category_id = $parameters[1];
 $gender = $parameters[2];
+$price = $parameters[3];
 
 try {
     $db = openDb();
@@ -16,12 +17,20 @@ try {
 
     if ($gender === 'M' || $gender === 'N') {
         $sql = "select * from product where category_id = $category_id and gender = '$gender'";
+        if ($price >= 0 && $price < 99999) {
+            $sql = "select * from product where category_id = $category_id and gender = '$gender' and price <= $price";
+        }
+
     }
     else if ($gender > 0 && $gender < 10000) {
         $sql = "select * from product where id = $gender";
+        
     }
     else {
         $sql = "select * from product where category_id = $category_id";
+        if ($price >= 0 && $price < 99999) {
+            $sql = "select * from product where category_id = $category_id and price <= $price";
+        }
     }
 
     $query = $db->query($sql);
