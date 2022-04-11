@@ -15,7 +15,7 @@ try {
     $db = openDb();
     $db->beginTransaction();
 
-    $sql = "INSERT INTO customer (fisrtname,lastname,address,zip,city) values ('".
+    $sql = "INSERT INTO customer (firstname,lastname,address,zip,city) values ('".
         filter_var($fname,FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
         filter_var($lname,FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
         filter_var($address,FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
