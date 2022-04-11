@@ -1,5 +1,8 @@
 <?php
 
+require_once '../inc/headers.php';
+require_once '../inc/functions.php';
+
 $input = json_decode(file_get_contents('php://input'));
 $fname = filter_var($input->firstname,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $lname = filter_var($input->lastname,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
