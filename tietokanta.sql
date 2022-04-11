@@ -36,6 +36,35 @@ create table message (
     message varchar(500) not null
 );
 
+create table customer (
+    id int primary key AUTO_INCREMENT,
+    firstname VARCHAR(50) not null,
+    lastname VARCHAR(50) not NULL,
+    address VARCHAR(50) not null,
+    zip VARCHAR(10) not NULL,
+    city VARCHAR(30) not null
+);
+
+create table `order` (
+    id int primary key AUTO_INCREMENT,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    customer_id int not null,
+    index customer_id(customer_id),
+    foreign key (customer_id) references customer(id)
+    on delete restrict
+);
+
+create table order_row(
+    order_id int not null,
+    index order_id(order_id),
+    foreign key (order_id) references `order`(id)
+    on delete RESTRICT,
+    product_id int not null,
+    index product_id(product_id),
+    FOREIGN key (product_id) REFERENCES product(id)
+    on delete restrict
+);
+
 
 insert into product (name, price, category_id, gender, image) values ('Testituote 1', 10, 3, 'M', 'kuva.png');
 insert into product (name, price, category_id, gender, image) values ('Testituote 2', 20, 3, 'N', 'kuva.png');
