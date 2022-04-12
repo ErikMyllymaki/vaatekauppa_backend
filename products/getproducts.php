@@ -17,7 +17,7 @@ try {
 
     if ($gender === 'M' || $gender === 'N') {
         $sql = "select * from product where category_id = $category_id and gender = '$gender'";
-        if ($price >= 0 && $price < 9999)  {
+        if ($price > 0 && $price < 9999)  {
             $sql = "select * from product where category_id = $category_id and gender = '$gender' and price <= $price";
         }
 
@@ -28,7 +28,7 @@ try {
     }
     else {
         $sql = "select * from product where category_id = $category_id";
-        if ($price >= 0 && $price < 9999) {
+        if ($price > 0 && $price < 9999) {
             $sql = "select * from product where category_id = $category_id and price <= $price";
         }
     }
