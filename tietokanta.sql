@@ -66,11 +66,11 @@ create table order_row(
 );
 
 
-insert into product (name, price, category_id, gender, image) values ('Testituote 1', 10, 3, 'M', 'kuva.png');
-insert into product (name, price, category_id, gender, image) values ('Testituote 2', 20, 3, 'N', 'kuva.png');
+insert into product (name, price, category_id, gender, image) values ('Sandaalit', 24.95, 3, 'N', 'kenkanaiset1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Tennarit', 109.95, 3, 'N', 'kenkanaiset2.jpg');
 
-insert into product (name, price, category_id, gender, image) values ('Testikenkä 1', 10, 2, 'M', 'kuva.png');
-insert into product (name, price, category_id, gender, image) values ('Testikenkä 2', 20, 2, 'M', 'kuva.png');
+insert into product (name, price, category_id, gender, image) values ('Tennarit', 54.95, 3, 'M', 'kenkamiehet1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Nauhakengät', 39.95, 3, 'M', 'kenkamiehet2.jpg');
 
 insert into product (name, price, category_id, gender, image) values ('Testikenkä 1', 10, 1, 'M', 'kuva.png');
 insert into product (name, price, category_id, gender, image) values ('Testikenkä 2', 20, 1,'N', 'kuva.png');
