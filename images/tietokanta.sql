@@ -86,12 +86,12 @@ insert into product (name, price, category_id, gender, image) values ('Pipo', 18
 insert into product (name, price, category_id, gender, image) values ('Kaulakoru', 14.95, 4, 'M', 'asustemiehet5.jpg');
 
 -- Yläosat
-insert into product (name, price, category_id, gender, image) values ('Napapaita', 21.95, 1, 'N', 'ylaosanaiset1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Bleiseri', 39.95, 1, 'N', 'ylaosanaiset1.jpg');
 insert into product (name, price, category_id, gender, image) values ('Untuvatakki', 79.95, 1, 'N', 'ylaosanaiset2.jpg');
 insert into product (name, price, category_id, gender, image) values ('Pitkähihainen paita', 24.95, 1, 'N', 'ylaosanaiset3.jpg');
-insert into product (name, price, category_id, gender, image) values ('Bleiseri', 39.95, 1, 'N', 'ylaosanaiset4.jpg');
-insert into product (name, price, category_id, gender, image) values ('T-paita', 24.95, 1, 'N', 'ylaosanaiset5.jpg');
-insert into product (name, price, category_id, gender, image) values ('Takki', 42.95, 1, 'N', 'ylaosanaiset6.jpg');
+insert into product (name, price, category_id, gender, image) values ('Napapaita', 21.95, 1, 'N', 'ylaosanaiset4.jpg');
+insert into product (name, price, category_id, gender, image) values ('Takki', 42.95, 1, 'N', 'ylaosanaiset5.jpg');
+insert into product (name, price, category_id, gender, image) values ('T-paita', 24.95, 1, 'N', 'ylaosanaiset6.jpg');
 insert into product (name, price, category_id, gender, image) values ('Bleiseri', 37.95, 1, 'N', 'ylaosanaiset7.jpg');
 insert into product (name, price, category_id, gender, image) values ('Pitkähihainen paita', 24.95, 1, 'M', 'ylaosamiehet1.jpg');
 insert into product (name, price, category_id, gender, image) values ('T-paita', 19.95, 1, 'M', 'ylaosamiehet2.jpg');
