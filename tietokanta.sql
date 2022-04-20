@@ -65,15 +65,27 @@ create table order_row(
     on delete restrict
 );
 
-
+-- Kengät
 insert into product (name, price, category_id, gender, image) values ('Sandaalit', 24.95, 3, 'N', 'kenkanaiset1.jpg');
 insert into product (name, price, category_id, gender, image) values ('Tennarit', 109.95, 3, 'N', 'kenkanaiset2.jpg');
 
 insert into product (name, price, category_id, gender, image) values ('Tennarit', 54.95, 3, 'M', 'kenkamiehet1.jpg');
 insert into product (name, price, category_id, gender, image) values ('Nauhakengät', 39.95, 3, 'M', 'kenkamiehet2.jpg');
 
+-- Asusteet
+insert into product (name, price, category_id, gender, image) values ('Lierihattu', 19.95, 4, 'N', 'asustenaiset1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Aurinkolasit', 14.95, 4, 'N', 'asustenaiset2.jpg');
+insert into product (name, price, category_id, gender, image) values ('Kaulakorusetti', 19.95, 4, 'N', 'asustenaiset3.jpg');
+insert into product (name, price, category_id, gender, image) values ('Korvakorut', 16.95, 4, 'N', 'asustenaiset4.jpg');
+insert into product (name, price, category_id, gender, image) values ('Käsikoru', 14.95, 4, 'N', 'asustenaiset5.jpg');
+insert into product (name, price, category_id, gender, image) values ('Käsilaukku', 49.95, 4, 'N', 'asustenaiset6.jpg');
+insert into product (name, price, category_id, gender, image) values ('Lippalakki', 19.95, 4, 'M', 'asustemiehet1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Aurinkolasit', 17.95, 4, 'M', 'asustemiehet2.jpg');
+insert into product (name, price, category_id, gender, image) values ('Käsikoru', 15.95, 4, 'M', 'asustemiehet3.jpg');
+insert into product (name, price, category_id, gender, image) values ('Pipo', 18.95, 4, 'M', 'asustemiehet4.jpg');
+insert into product (name, price, category_id, gender, image) values ('Kaulakoru', 14.95, 4, 'M', 'asustemiehet5.jpg');
+
 insert into product (name, price, category_id, gender, image) values ('Testikenkä 1', 10, 1, 'M', 'kuva.png');
 insert into product (name, price, category_id, gender, image) values ('Testikenkä 2', 20, 1,'N', 'kuva.png');
 
-insert into product (name, price, category_id, gender, image) values ('Testikenkä 1', 10, 4,'N', 'kuva.png');
-insert into product (name, price, category_id, gender, image) values ('Testikenkä 2', 20, 4,'N', 'kuva.png');
+
