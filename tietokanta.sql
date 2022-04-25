@@ -100,4 +100,14 @@ insert into product (name, price, category_id, gender, image) values ('T-paita',
 insert into product (name, price, category_id, gender, image) values ('Collegepaita', 34.95, 1, 'M', 'ylaosamiehet5.jpg');
 insert into product (name, price, category_id, gender, image) values ('Hihaton paita', 22.95, 1, 'M', 'ylaosamiehet6.jpg');
 
+-- Alaosat
+insert into product (name, price, category_id, gender, image) values ('Revityt farkut', 59.95, 2, 'N', 'alaosatnaiset1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Suorat housut', 49.95, 2, 'N', 'alaosatnaiset2.jpg');
+insert into product (name, price, category_id, gender, image) values ('Hame', 29.95, 2, 'N', 'alaosatnaiset3.jpg');
+insert into product (name, price, category_id, gender, image) values ('Suorat housut', 39.95, 2, 'N', 'alaosatnaiset4.jpg');
+insert into product (name, price, category_id, gender, image) values ('Collegehousut', 39.95, 2, 'N', 'alaosatnaiset5.jpg');
+insert into product (name, price, category_id, gender, image) values ('Leveälahkeiset farkut', 54.95, 2, 'N', 'alaosatnaiset6.jpg');
+insert into product (name, price, category_id, gender, image) values ('Kuviolliset kangashousut', 34.95, 2, 'M', 'alaosatmiehet1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Farkut', 59.95, 2, 'M', 'alaosatmiehet2.jpg');
+insert into product (name, price, category_id, gender, image) values ('Kuviolliset kangashousut', 44.95, 2, 'M', 'alaosatmiehet3.jpg');
 
