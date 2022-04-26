@@ -33,7 +33,7 @@ try {
         $sql = "INSERT INTO order_row (order_id,product_id,amount) values ("
         .
             $order_id. "," .
-            $product->id .
+            $product->id . ","
             $amount
         . ")";
         executeInsert($db,$sql);
