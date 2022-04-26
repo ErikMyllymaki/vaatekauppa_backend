@@ -66,16 +66,16 @@ create table order_row(
 );
 
 -- Kengät
-insert into product (name, price, category_id, gender, image) values ('Tennarit', 39.95, 3, 'N', 'kenkanaiset1.jpg');
-insert into product (name, price, category_id, gender, image) values ('Tennarit', 69.95, 3, 'N', 'kenkanaiset2.jpg');
+insert into product (name, price, category_id, gender, image) values ('Tennarit', 39.95, 3, 'N', 'kenkanaiset_1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Tennarit', 69.95, 3, 'N', 'kenkanaiset_2.jpg');
 insert into product (name, price, category_id, gender, image) values ('Korkokengät', 59.95, 3, 'N', 'kenkanaiset3.jpg');
 insert into product (name, price, category_id, gender, image) values ('Tennarit', 84.95, 3, 'N', 'kenkanaiset4.jpg');
 insert into product (name, price, category_id, gender, image) values ('Nilkkurit', 64.95, 3, 'N', 'kenkanaiset5.jpg');
 insert into product (name, price, category_id, gender, image) values ('Talvinilkkurit', 69.95, 3, 'N', 'kenkanaiset6.jpg');
 insert into product (name, price, category_id, gender, image) values ('Nauhalliset nilkkurit', 59.95, 3, 'N', 'kenkanaiset7.jpg');
 
-insert into product (name, price, category_id, gender, image) values ('Tennarit', 39.95, 3, 'M', 'kenkamiehet1.jpg');
-insert into product (name, price, category_id, gender, image) values ('Tennarit', 89.95, 3, 'M', 'kenkamiehet2.jpg');
+insert into product (name, price, category_id, gender, image) values ('Tennarit', 39.95, 3, 'M', 'kenkamiehet_1.jpg');
+insert into product (name, price, category_id, gender, image) values ('Tennarit', 89.95, 3, 'M', 'kenkamiehet_2.jpg');
 insert into product (name, price, category_id, gender, image) values ('Tennarit', 94.95, 3, 'M', 'kenkamiehet3.jpg');
 insert into product (name, price, category_id, gender, image) values ('Tennarit', 89.95, 3, 'M', 'kenkamiehet4.jpg');
 insert into product (name, price, category_id, gender, image) values ('Nauhalliset nilkkurit', 74.95, 3, 'M', 'kenkamiehet5.jpg');
