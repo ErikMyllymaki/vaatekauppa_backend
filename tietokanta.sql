@@ -60,6 +60,7 @@ create table order_row(
     foreign key (order_id) references `order`(id)
     on delete RESTRICT,
     product_id int not null,
+    amount int,
     index product_id(product_id),
     FOREIGN key (product_id) REFERENCES product(id)
     on delete restrict

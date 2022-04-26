@@ -9,6 +9,7 @@ $lname = filter_var($input->lastname,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $address = filter_var($input->address,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $zip = filter_var($input->zip,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $city = filter_var($input->city,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$amount = filter_var($input->amount,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $cart = $input->cart;
 
 try {
@@ -29,10 +30,11 @@ try {
     $order_id = executeInsert($db,$sql);
 
     foreach ($cart as $product) {
-        $sql = "INSERT INTO order_row (order_id,product_id) values ("
+        $sql = "INSERT INTO order_row (order_id,product_id,amount) values ("
         .
             $order_id. "," .
-            $product->id
+            $product->id .
+            $amount
         . ")";
         executeInsert($db,$sql);
     }
