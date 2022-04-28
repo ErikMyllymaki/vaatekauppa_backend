@@ -65,6 +65,18 @@ create table order_row(
     on delete restrict
 );
 
+create table sizes(
+    id int primary key AUTO_INCREMENT,
+    size char(5) not null
+);
+
+insert into sizes (size) values ('XS');
+insert into sizes (size) values ('S');
+insert into sizes (size) values ('M');
+insert into sizes (size) values ('L');
+insert into sizes (size) values ('XL');
+insert into sizes (size) values ('XXL');
+
 -- Kengät
 insert into product (name, price, category_id, gender, image) values ('Tennarit', 39.95, 3, 'N', 'kenkanaiset_1.jpg');
 insert into product (name, price, category_id, gender, image) values ('Tennarit', 69.95, 3, 'N', 'kenkanaiset_2.jpg');
