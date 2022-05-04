@@ -70,16 +70,7 @@ create table sizes(
     size char(5) not null
 );
 
-create table shoesizes (
-    id int PRIMARY KEY auto_increment,
-    size varchar(10)
-);
 
-insert into shoesizes (size) values ('38');
-insert into shoesizes (size) values ('39');
-insert into shoesizes (size) values ('40');
-insert into shoesizes (size) values ('41');
-insert into shoesizes (size) values ('42');
 
 insert into sizes (size) values ('XS');
 insert into sizes (size) values ('S');
